@@ -28,7 +28,6 @@ section{
 
 section>h2{
     font-size: 3rem;
-    /* padding-bottom: 2%; */
     margin-bottom: 2%;
     color: var(--empty-color)
 }
@@ -39,7 +38,6 @@ section>h2{
 }
 
 .steps{
-    /* border:solid red; */
     width: 100%;
     display:flex;
     justify-content:space-between;
@@ -54,7 +52,6 @@ section>h2{
     overflow: hidden;
     width: 2rem;
     height: 2rem;
-
     z-index: 99;
     display:flex;
     align-items: center;
@@ -73,26 +70,19 @@ section>h2{
     width: 100%;
     height: 10%;
     position:absolute;
-    top: 45%;
-    /* left: 5%; */
-    /* transform: translateY(-45%); */
+    top: 45%;   
 }
 
 .in-line{
     display:block;
     height: 100%;
     width: 0%;
-    /* width: var(--line-load); */
-    /* color: red; */
-    /* transform: translateY(-50%); */
     background-color:var(--load-color);
-    /* z-index:100; */
+    transition: 250ms ease-in;
 }
 
 .buttons{
-    border: solid red;
     margin-top: 2%;
-    /* width: 15%; */
     min-width: 15%;
     display:flex;
     justify-content: space-between;
