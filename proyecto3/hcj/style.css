@@ -1,14 +1,18 @@
 :root{
     --height-header: 10svh;
     --end-color: rgb(138, 138, 138);
-    --menu-color: rgb(110, 218, 254);
+    --menu-color: rgb(0, 191, 255);
     --back-color: rgb(255, 255, 255) ;
+    --sec-text-color: rgb(209, 209, 209);
     --rotate: -20deg; 
+    --back-rotate: 20deg;
 }
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scrollbar-width: none;
 }
 
 body{
@@ -19,18 +23,15 @@ header{
     height: var(--height-header);
     width: var(--height-header);
     position: absolute;
-    /* top: 0; */
     border-radius: 0 0 100% ;
     background-color: var(--menu-color);
     z-index:100;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* float: inline-start; */
 }
 
 main{
-    /* border: solid; */
     position: absolute;
     width: 100%;
     height: 100svh;
@@ -43,7 +44,7 @@ h2{
 }
 
 p{
-    font-size: 1.5rem;
+    font-size: 1rem;
 }
 
 img{
@@ -54,20 +55,6 @@ img{
     content: "";
     height: var(--height-header)
 }
-
-.sub{
-    font-size: 2rem;
-    color: lightgray
-}
-
-.title-photo{
-    color: black;
-}
-
-/* .container{
-    background-color: var(--end-color);
-    min-width: 100% ; 
-}*/
 
 .move-container{
     transform-origin: top left;
@@ -80,8 +67,7 @@ img{
 }
 
 .sub-container{
-    /* border:solid grey; */
-    width: 75%;
+    width: 50%;
 }
 
 .rotate{
@@ -91,47 +77,58 @@ img{
 footer{
     height: 100%;
     width: 20%;
-    /* border: solid red; */
     position: absolute;
     top: 0;
     left: -20%;
     transform-origin: top center;
     transform: translateX(-100%);
     transition: transform 500ms ease-in-out;
-    /* transform: rotate(var(--rotate)); */
 }
-
-/* footer> {
-    border:solid white;
-} */
 
 .footer-container{
     position: relative;
-    /* border: solid grey; */
     width: 100%;
     height: 100%;
 }
 .options{
-    /* border: solid green; */
     position: absolute;
     bottom: 0;
     right: 5%;
-    /*width: 50px;/**/
-    /*height: 50px/**/
 }
-
-/*.home{
-    border:solid;
-}*/
 
 .org-tp-rg{
     margin: 1rem;
     transform-origin: top right;
     transition: transform 500ms ease-in-out;
-
 }
 
 .unrotate{
-    transform: rotate(20deg);
+    transform: rotate(var(--back-rotate));
 }
 
+.menu-text{
+    font-size: 2rem;
+    color: var(--sec-text-color)
+}
+
+.sub{
+    font-size: 2rem;
+    color: var(--sec-text-color)
+}
+
+.corner {
+    /* border: solid red; */
+    transform: translateX(-50%) translateY(-15%);
+    width: 40%;
+    height: 40%;
+    background-size: cover;
+    content: "f0c9";
+    background-image: url(https://img.icons8.com/?size=100&id=8113&format=png&color=000000);
+
+  }
+
+.on-menu{
+    background-image: url(https://img.icons8.com/?size=100&id=8112&format=png&color=000000); 
+    
+    /* border: solid red; */
+}
