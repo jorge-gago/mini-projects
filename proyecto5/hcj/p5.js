@@ -12,7 +12,6 @@ const timer = setInterval(
             return 0
         }  
         num += 1
-        console.log(num)
         setNum()
         setBlurr()
     }   
