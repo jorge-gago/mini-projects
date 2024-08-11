@@ -1,0 +1,56 @@
+:root{
+    --min-width: 2.3svw; 
+    --back-color: rgb(121, 148, 228);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: var(--back-color);
+    height: 100svh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 100%;
+    border: none;
+    margin: 10%;
+    margin-right: var(--min-width);
+    outline: none;
+    font-size: 1.2rem;
+}
+
+img{
+    width:var(--min-width);
+}
+
+.container{
+    position: relative;
+    background-color:white;
+    width:var(--min-width);
+    height: var(--min-width);
+    display: flex;
+    align-items: center;
+    transition: width 350ms;
+    overflow: hidden;
+}
+
+.btn{
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    min-width: var(--min-width);
+    height: var(--min-width);
+    background-color: white;
+    z-index: 99;
+}
+
+.hidden{
+    width: 15%;
+}
