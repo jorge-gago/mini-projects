@@ -7,7 +7,6 @@
 .container{
     width: 100svw;
     height: 200svh;
-    border: solid red;
     display: flex;
     justify-content: center;
 }
@@ -22,15 +21,14 @@
     font-size: 5rem;
     color: white;
     transition: all 250ms;
-    transform: translateX(200%);
+    transform: translateX(500%);
 }
 
 .box:nth-of-type(2n){
-    transform: translate(-200%);
+    transform: translate(-500%);
 }
 
 .lst{
-    border: solid green;
     width: 25%;
     height: 100%;
     display:flex;

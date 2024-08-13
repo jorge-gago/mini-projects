@@ -10,24 +10,23 @@ const boxes = document.querySelectorAll(".box")
     
 // }
 
-const addObserver = (objs) => {
-    objs.forEach(element => {
-        observer.observe(element)
-    });
-}
+// // const addObserver = (objs) => {
+// //     objs.forEach(element => {
+// //         observer.observe(element)
+// //     });
+// // }
 
 // const observer = new IntersectionObserver(isVisible, {rootMargin: "10%"})
-const observer = new IntersectionObserver(elements => {
-    elements.forEach(box => {
-        box.target.classList.toggle("act", box.isIntersecting)
-        console.info(box)
-    })
-},
-{
-    threshold: "0.5",
-    // rootMargin: "-200px",
-})
-addObserver(boxes)
+// // const observer = new IntersectionObserver(elements => {
+// //     elements.forEach(box => {
+// //         box.target.classList.toggle("act", box.isIntersecting)
+// //         console.info(box)
+// //     })
+// // },
+// // {
+// //     rootMargin: "0px",
+// // })
+// // addObserver(boxes)
 
 
 
@@ -44,18 +43,22 @@ addObserver(boxes)
 
 // }
 
-// document.addEventListener("scroll", handleEvent)
+const trigger = window.innerHeight * 0.7
+const handleScroll = () => {
+    boxes.forEach(box => {
+        const Top = box.getBoundingClientRect().top
+    
+        if(Top < trigger) {
+            box.classList.add('act')
+        } else {
+            box.classList.remove('act')
+        }
+    
+    })
+}
+
+document.addEventListener("scroll", handleScroll)
+handleScroll()
 
 
-console.log("on")
 
-// const trigger = window.innerHeight * 0.9
-// contents.forEach(box => {
-//     const Top = box.getBoundingClientRect().top
-
-//     if(Top < trigger) {
-//         box.classList.add('show')
-//     } else {
-//         box.classList.remove('show')
-//     }
-// })
