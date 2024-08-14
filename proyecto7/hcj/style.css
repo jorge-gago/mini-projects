@@ -1,0 +1,110 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    width: 100svw;
+    height: 100svh;
+}
+
+main{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+img{
+    size-adjust: cover;
+}
+
+.container{
+    overflow: hidden;
+    height: 100%;
+    width: 50%;
+    transition: width 500ms;
+    position:relative;
+}
+
+.container:hover{
+    width: 85%;
+}
+
+.lft{
+    background-size:cover;
+    width: 100%; 
+    height: 100%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: content-box;
+    background-image: url(https://pbs.twimg.com/media/GTQEMwQWMAAQ2XD.jpg);
+}
+
+.lft::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(101, 101, 225, 0.6);
+    z-index: 2
+}
+
+.rgt{
+    background-size:cover;
+    width: 100%; 
+    height: 100%; 
+    background-repeat: no-repeat;
+    background-position: center;
+    background-origin: content-box;
+    background-image: url(https://www.trustedreviews.com/wp-content/uploads/sites/54/2020/09/XboxSeriesXTech_Inline1.jpg);
+}
+
+.rgt::after{
+    content:"";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(68, 68, 72, 0.6);
+    z-index: 2
+}
+
+.ctn{
+    position: absolute;
+    z-index: 99;
+    color: white;
+    width: 25%;
+    height: 50%;
+    transform: translatey(50%) translateX(-50%);
+    left: 50%;
+    position: relative;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    white-space: nowrap
+}
+
+.btn{
+    border: solid white;
+    border-radius: 10px;
+    font-size: 1.5rem;
+    padding: 2% 10% 2% 10%;
+    position: absolute;
+    bottom: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap
+}
+
+.ps5-back:hover{
+    background-color: rgb(101, 101, 225);
+}
+
+.xsx-back:hover{
+    background-color: rgb(28, 122, 28);
+}
